@@ -72,7 +72,7 @@ var x;
 | 15  | sort()          |                 |
 | 16  | splice()        |                 |
 | 17  | unshift()       |                 |
-| 18  | find()          |                 |
+| 18  | length()        |                 |
 | 19  |                 |                 |
 
 
