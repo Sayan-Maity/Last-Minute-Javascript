@@ -10,9 +10,109 @@
 <h1>Hello Javascript</h1>
 
 
+<p class="hello1">Hello 1</p>
+<p class="hello1">Hello 2</p>
+<p id="hello1">Hello 3</p>
+<p id="hello2">Hello 100</p>
+<span></span>
+
+
 
 
 <script>
+
+
+
+const obj = {firstName: "sayan", lastName: "maity"}
+const obj2 = {firstName: "anom", lastName: "das"}
+
+function printName(girl) {
+    console.log(this.firstName + " " + this.lastName +  " loves " + girl)
+}
+
+// function borrowing :
+// call :
+printName.call(obj, "sneha")
+printName.call(obj2)
+
+// apply :
+printName.apply(obj, ["sneha"])
+
+// bind :
+let printMyName = printName.bind(obj, "sneha")
+printMyName()
+
+
+
+
+// DESCRIPTION :
+// call and apply are almost same only difference is in the way of passing arguments
+// in call we pass arguments one by one
+// in apply we pass arguments in an array
+// bind is used to create a copy of a function and then we can use it later
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    const a = document.getElementsByClassName("hello1")
+    console.log(a)
+    
+    const b = document.getElementById("hello2")
+    console.log(b)
+    
+    const c = document.getElementsByTagName("p")
+    console.log(c)
+
+    const d = document.querySelector(".hello1")
+    console.log(d)
+    
+    const e = document.querySelectorAll(".hello1")
+    console.log(e)
+
+    document.querySelector(".hello1").innerHTML = "Hello Everyone, I am Sayan"
+    document.querySelector(".hello1").style.color = "red"
+    document.querySelector(".hello1").style.backgroundColor = "#333"
+    document.querySelector(".hello1").add = "hey"
+    document.querySelector(".hello1").remove = "hey"
+    
+*/
+
+
+/*
+const a = 50;
+
+const arr = [1,2,3]
+arr.push(90);
+console.log(arr)
+
+const obj = {name: "sayan", age: 20}
+obj.name = "maity"
+console.log(obj)
+*/
+
+
+
+
+
+
+
+
+
 
 
 /*
@@ -191,6 +291,7 @@ executeRandom(function randomNumber () {
 })
 */
 
+/*
 async function executeRandom() {
     return new Promise ((resolve, reject) => {
         setTimeout(() => {
@@ -211,10 +312,7 @@ executeRandom()
 })
 .then (randomNumber)
 
-
-
-
-
+*/
 
 
 
