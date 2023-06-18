@@ -21,7 +21,64 @@
 
 <script>
 
+function promiseRandom () {
+    return new Promise ((resolve, reject) => {
+        var num = Math.random()
 
+        if(num == 0) resolve(num);
+        else reject("There is no number to return !!")
+    })
+}
+
+promiseRandom()
+    .then((res) => {
+        console.log(res)
+    })
+    .catch((err) => {
+        console.log("Error is =>", err)
+    })
+
+// IIFE
+/*
+(function func() {
+    console.log("Hello")
+})()
+*/
+
+
+/*
+// Merge 2 sorted arrays into 1 sorted array :
+    const arr = [1,2,3]
+    const arr2 = [4,5,6]
+
+    function mergeArray(arr, arr2) {
+        let mergedArr = []
+        let i = 0, j = 0;
+        while(i < arr.length && j < arr2.length != 0) {
+            if(arr[i] < arr2[j]) {
+                mergedArr.push(arr[i])
+                i++
+            }
+            else {
+                mergedArr.push(arr2[j])
+                j++
+            }
+        }
+
+        while(i < arr.length) {
+            mergedArr.push(arr[i])
+            i++
+        }
+        while(j < arr2.length) {
+            mergedArr.push(arr2[j])
+            j++
+        }
+
+        return mergedArr
+    }
+
+    console.log(mergeArray(arr, arr2))
+*/
 
 const obj = {firstName: "sayan", lastName: "maity"}
 const obj2 = {firstName: "anom", lastName: "das"}
@@ -32,15 +89,18 @@ function printName(girl) {
 
 // function borrowing :
 // call :
-printName.call(obj, "sneha")
-printName.call(obj2)
+//printName.call(obj, "sneha")
+//printName.call(obj2)
 
 // apply :
-printName.apply(obj, ["sneha"])
+//printName.apply(obj, ["sneha"])
 
 // bind :
-let printMyName = printName.bind(obj, "sneha")
-printMyName()
+//let printMyName = printName.bind(obj, "sneha")
+//printMyName()
+
+
+
 
 
 
