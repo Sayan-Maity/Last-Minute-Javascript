@@ -14,7 +14,6 @@
 
 <script>
 
-    console.log("Hello Javascript")
 
 /*
     1. Register
@@ -24,39 +23,193 @@
     5. Display user data
 */
 
-
-function register() {
-    console.log("Register end")
+function register(cb) {
+    console.log("Application process starts")
+    setTimeout(() => {
+        console.log("Register end")
+        cb()
+    }, 2000)
 }
-function sendEmail() {
-    console.log("Email end")
+function sendEmail(cb) {
+    setTimeout(() => {
+        console.log("Email end")
+        cb()
+    }, 5000)
 }
-function login() {}
-function getUserData() {
-    console.log("Got User Data")
+function login(cb) {
+    setTimeout(() => {
+        console.log("Login end")
+        cb()
+    }, 1000)
+}
+function getUserData(cb) {
+    setTimeout(() => {
+        console.log("Got User Data")
+        cb()
+    }, 3000)
 }
 function displayUserData() {
     console.log("Displayed User Data")
+    console.log("Application process ends")
+
+}
+
+/*
+register(function () {
+    sendEmail(function () {
+        login(function () {
+            getUserData(function () {
+                displayUserData()
+            })
+        })
+    })
+
+})
+*/
+
+
+
+/* -------------------------------------------------------------------- */
+
+
+/*
+    1. Register
+    2. Send Email
+    3. Login
+    4. Get user data
+    5. Display user data
+*/
+
+function register() {
+    return new Promise((resolve, reject) => {
+        console.log("Application process starts")
+        setTimeout(() => {
+            console.log("Register end")
+            resolve();
+        }, 2000)
+    })
+}
+function sendEmail() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Email end")
+            resolve()
+        }, 5000)
+    })
+}
+function login() {
+    return new Promise ((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Login end")
+            resolve()
+        }, 1000)
+    })
+}
+function getUserData() {
+    return new Promise ((resolve, reject) => {
+        setTimeout(() => {
+            return reject("Error in getting user data")
+            console.log("Got User Data")
+            /*resolve()*/
+        }, 3000)
+    })
+}
+function displayUserData() {
+    return new Promise ((resolve, reject) => {
+        console.log("Displayed User Data")
+        console.log("Application process ends")
+        resolve()
+    })
+}
+
+/*
+register()
+    .then(sendEmail)
+    .then(login)
+    .then(getUserData)
+    .then(displayUserData)
+    .catch((err) => {
+        console.log(err)
+    })
+*/
+
+
+
+/* -------------------------------------------------------------------- */
+
+/*
+async function startProcess() {
+    await register()
+    await sendEmail()
+    await login()
+    await getUserData()
+    await displayUserData()
+}
+startProcess()
+.catch((err) => {
+    console.log(err)
+})
+*/
+
+
+/* -------------------------------------------------------------------- */
+
+/*
+async function startProcess() {
+    try {
+        await register()
+        await sendEmail()
+        await login()
+        await getUserData()
+        await displayUserData()
+    }
+    catch(err) {
+        console.log(err)
+    }
+}
+startProcess()
+*/
+
+
+/* ------------------------------------------------------------------------ */
+
+/*
+function executeRandom(callback) {
+
+    setTimeout(() => {
+        console.log("First print this")
+        callback()
+    }, 3000)
+}
+*/
+
+
+/*
+executeRandom(function randomNumber () {
+    var num = Math.random()
+    console.log(num)
+})
+*/
+
+async function executeRandom() {
+    return new Promise ((resolve, reject) => {
+        setTimeout(() => {
+            return reject("Initially app crashed !!")
+            console.log("First print this")
+        }, 3000)
+    })
+}
+function randomNumber () {
+    var num = Math.random()
+    console.log(num)
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+executeRandom()
+.catch((err) => {
+    console.log(err)
+})
+.then (randomNumber)
 
 
 
