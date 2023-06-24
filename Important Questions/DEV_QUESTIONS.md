@@ -19,9 +19,9 @@
 
 - `State`: Class components are called stateful components because it allows you to store and update component state. Functional components (stateless components) don't have access to state by default, but React introduced the useState hook to address this need. With useState, functional components can achieve similar functionality to class component state.
 
-- `Performance`: Functional components are generally more performant than class components. This is because functional components leverage React's built-in optimization mechanisms like memoization and hooks, which can help reduce unnecessary re-renders and improve overall performance.
+- `Lifecycle methods`: Class components have access to lifecycle methods such as componentDidMount, componentDidUpdate, and componentWillUnmount. Although functional components didn't have direct equivalents to these methods initially, React introduced the useEffect hook to address this need. With useEffect, functional components can achieve similar functionality to class component lifecycle methods.
 
 - `Reusability and composition`: Functional components promote reusability and composability through the use of hooks. Hooks allow you to extract and reuse specific pieces of stateful or side-effect logic, making it easier to build and maintain complex UI components.
 
-- `Lifecycle methods`: Class components have access to lifecycle methods such as componentDidMount, componentDidUpdate, and componentWillUnmount. Although functional components didn't have direct equivalents to these methods initially, React introduced the useEffect hook to address this need. With useEffect, functional components can achieve similar functionality to class component lifecycle methods.
+- `Performance`: Functional components are generally more performant than class components. This is because functional components leverage React's built-in optimization mechanisms like memoization and hooks, which can help reduce unnecessary re-renders and improve overall performance.
 
