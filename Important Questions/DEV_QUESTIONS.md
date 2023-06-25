@@ -25,3 +25,29 @@
 
 - `Performance`: Functional components are generally more performant than class components. This is because functional components leverage React's built-in optimization mechanisms like memoization and hooks, which can help reduce unnecessary re-renders and improve overall performance.
 
+
+
+## Difference between `setInterval()` and `setTimeout` 
+>  `setTimeout` executes a function once after a specified delay, while `setInterval` repeatedly executes a function at a fixed interval until it is canceled. `clearTimeout` is used to cancel the setTimeout and `clearInterval` is used to cancel the setInterval
+
+```
+// SetTimeout (Executes the function after 2 seconds)
+const timeoutId = setTimeout(() => {
+  console.log("This will be executed once after 2 seconds.");
+}, 2000);
+
+// Cancel the timeout before it executes
+clearTimeout(timeoutId);
+```
+
+```
+// SetInterval (Executes the function every 1 second)
+const intervalId = setInterval(() => {
+  console.log("This will be executed every 1 second.");
+}, 1000);
+
+// Cancel the interval after 5 seconds
+setTimeout(() => {
+  clearInterval(intervalId);
+}, 5000);
+```

@@ -181,9 +181,15 @@ try{
 
 */
 
+const repeat = setInterval(() => {
+    console.log("I am Sayan")
+}, 1000)
 
+const stop = setTimeout(() => {
+    clearInterval(repeat)
+    console.log("Stopped !")
 
-
+}, 5000)
 
 
 
