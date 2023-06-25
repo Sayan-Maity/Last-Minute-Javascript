@@ -32,22 +32,23 @@
 
 ```
 // SetTimeout (Executes the function after 2 seconds)
+
 const timeoutId = setTimeout(() => {
   console.log("This will be executed once after 2 seconds.");
 }, 2000);
 
-// Cancel the timeout before it executes
-clearTimeout(timeoutId);
+clearTimeout(timeoutId); // Cancel the timeout before it executes
+
 ```
 
 ```
 // SetInterval (Executes the function every 1 second)
+
 const intervalId = setInterval(() => {
   console.log("This will be executed every 1 second.");
 }, 1000);
 
-// Cancel the interval after 5 seconds
 setTimeout(() => {
-  clearInterval(intervalId);
+  clearInterval(intervalId); // Cancel the interval after 5 seconds
 }, 5000);
 ```
