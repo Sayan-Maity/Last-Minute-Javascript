@@ -27,7 +27,7 @@
 
 
 
-## Difference between `setInterval()` and `setTimeout` 
+## Difference between setInterval() and setTimeout
 >  `setTimeout()` executes a function once after a specified delay, while `setInterval()` repeatedly executes a function at a fixed interval until it is canceled. `clearTimeout()` is used to cancel the setTimeout and `clearInterval()` is used to cancel the setInterval
 
 ```
@@ -52,3 +52,61 @@ setTimeout(() => {
   clearInterval(intervalId); // Cancel the interval after 5 seconds
 }, 5000);
 ```
+
+
+## Differentiate between Promise and async/await
+> Both `Promises` and `async/await` are mechanisms in JavaScript that deal with asynchronous code execution and make it easier to work with asynchronous operations. However, they have different syntax and underlying mechanisms.
+
+- Promises are objects that represent the eventual completion or failure of an asynchronous operation and allow you to handle the result.
+- They have three states: pending, fulfilled, or rejected.
+- Promises provide a .then() method to handle the successful completion of an operation and a .catch() method to handle any errors.
+- You can chain multiple .then() methods to handle multiple asynchronous operations sequentially.
+
+```
+const fetchData = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Data fetched successfully');
+    }, 2000);
+  });
+};
+
+fetchData()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+```
+
+- `async/await` is a syntactical feature introduced in ECMAScript 2017 (ES8) that allows you to write asynchronous code in a more synchronous-like manner.
+- It provides a cleaner and more readable way to handle Promises.
+- The async keyword is used to define an asynchronous function, and within that function, you can use the await keyword to pause the execution until a Promise is fulfilled and retrieve its result.
+- await can only be used within an async function.
+- async/await code is structured like synchronous code, making it easier to understand and write.
+
+```
+const fetchData = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Data fetched successfully');
+    }, 2000);
+  });
+};
+
+const fetchDataAsync = async () => {
+  try {
+    const data = await fetchData();
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+fetchDataAsync();
+
+```
+
+- In summary, Promises are a lower-level abstraction that allow you to handle asynchronous operations using .then() and .catch(), while async/await is a higher-level syntactic sugar built on top of Promises, providing a more synchronous-like coding experience.
