@@ -28,7 +28,7 @@
 
 
 ## Difference between `setInterval()` and `setTimeout` 
->  `setTimeout` executes a function once after a specified delay, while `setInterval` repeatedly executes a function at a fixed interval until it is canceled. `clearTimeout` is used to cancel the setTimeout and `clearInterval` is used to cancel the setInterval
+>  `setTimeout()` executes a function once after a specified delay, while `setInterval()` repeatedly executes a function at a fixed interval until it is canceled. `clearTimeout()` is used to cancel the setTimeout and `clearInterval()` is used to cancel the setInterval
 
 ```
 // SetTimeout (Executes the function after 2 seconds)
