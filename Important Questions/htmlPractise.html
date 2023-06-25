@@ -21,6 +21,169 @@
 
 <script>
 
+// Place order         - 2
+// Cut the fruit       - 2
+// add water and ice   - 1
+// start the machine   - 1
+// select container    - 2
+// select toppings     - 3
+// serve ice cream     - 2
+
+
+let stocks = {
+    fruits: ["strawberry", "grapes", "banana", "apple"],
+    liquid: ["water", "ice"],
+    holder: ["cone", "cup", "stick"],
+    toppings: ["chocolate", "peanuts"]
+}
+    
+/*
+let order = (fruitName, liquidName, holderName, toppingName, call_production) => {
+   setTimeout(() => {
+       console.log(`${stocks.fruits[fruitName] } was selected`)
+       call_production()
+   }, 2000)
+}
+let production = () => {
+    setTimeout(() => {
+        console.log("Production has started")
+
+        setTimeout(() => {
+            console.log("Thr fruits has been chopped")
+
+            setTimeout(() => {
+                console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} was added`)
+                
+                setTimeout(() => {
+                    console.log("The machine has been started")
+                    
+                    setTimeout(() => {
+                        console.log(`${stocks.holder[0]} was selected`)
+                        
+                        setTimeout(() => {
+                            console.log(`${stocks.toppings[1]} was selected`)
+                            
+                            setTimeout(() => {
+                                console.log("Serve Ice Cream")
+                            }, 2000)
+                        }, 3000)
+                    }, 2000)
+                }, 1000)
+            }, 1000)
+        }, 2000)
+    }, 0)
+}
+let serve = () => {}
+
+
+order(1, stocks.liquid[1], stocks.holder[0], stocks.toppings[1], production)
+*/
+
+
+/*
+// Using Promises :
+
+let is_shop_open = true
+
+let order = (time, work) => {
+    return new Promise((resolve, reject) => {
+        if(is_shop_open) {
+            setTimeout(() => {
+                resolve(work())
+            }, time)
+        }
+        else {
+            reject(console.log("Sorry, our shop is closed"))
+        }
+    })
+}
+
+
+order(2000, () => console.log(`${stocks.fruits[0]} was selected`))
+.then(() => {
+    return order(0, () => console.log("Production has started"))
+})
+.then(() => {
+    return order(2000, () => console.log("The fruit has been chopped"))
+})
+.then(() => {
+    return order(1000, () => console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} was added`))
+})
+.then(() => {
+    return order(1000, () => console.log("The machine has been started"))
+})
+.then(() => {
+    return order(2000, () => console.log(`${stocks.holder[0]} was selected`))
+})
+.then(() => {
+    return order(3000, () => console.log(`${stocks.toppings[1]} was selected`))
+})  
+.then(() => {
+    return order(2000, () => console.log("Serve Ice Cream"))
+})
+.catch(() => {
+    console.log("Customer left")
+})
+
+*/
+
+/*
+let initiate = true
+
+let b = (time, work) => {
+    return new Promise ((resolve, reject) => {
+        if(initiate) {
+            setTimeout(() => {
+                resolve(work())
+            }, time)
+        }
+        else {
+            reject(console.log("Error, cannot print"))
+        }
+    })
+}
+
+b(0, ()=>console.log("Hello"))
+.then(() => {
+    return b(2000, ()=>console.log("World")) 
+})
+.then(() => {
+    return b(0, ()=>console.log("Here I am"))
+})
+.catch(() => {
+    console.log("You cannot print the sentence")
+})
+.finally(() => {
+    console.log("I am done")
+})
+*/
+
+
+/*
+fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
+      .then(res => res.json())
+      .then(data => console.log({data}))
+
+
+try{
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts?userId=1', {
+    method: 'POST',
+    body: JSON.stringify({
+      title: 'foo',
+      body: 'bar',
+      userId: 1
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+}
+
+*/
+
+
+
+
 
 
 
