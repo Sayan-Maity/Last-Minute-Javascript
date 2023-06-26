@@ -181,6 +181,7 @@ try{
 
 */
 
+/*
 const repeat = setInterval(() => {
     console.log("I am Sayan")
 }, 1000)
@@ -190,12 +191,47 @@ const stop = setTimeout(() => {
     console.log("Stopped !")
 
 }, 5000)
+*/
 
 
 
+// Call, Bind, Apply :
+const a = {
+    name: "Sayan",
+    age: 20,
+}
+
+function func (verb) {
+    console.log("My name is =>", this.name, "and age is =>", this.age, "and am =>", verb, "boy")
+}
 
 
+// Call :
+Function.prototype.myCall = function (scope, ...args) {
+    scope._this = this
+    return scope._this(...args)
+}
 
+console.log(func.myCall(a, "good"))
+
+// Apply :
+Function.prototype.myApply = function (scope, args) {
+    scope._this = this
+    return scope._this(...args)
+}
+
+console.log(func.myApply(a, ["good"]))
+
+// Bind :
+Function.prototype.myBind = function (scope, ...args) {
+    scope._this = this
+    return function () {
+        return scope._this(...args)
+    }
+}
+
+let res = func.myBind(a, "bad")
+res()
 
 
 
