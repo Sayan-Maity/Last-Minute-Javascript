@@ -194,7 +194,7 @@ const stop = setTimeout(() => {
 */
 
 
-
+/*
 // Call, Bind, Apply :
 const a = {
     name: "Sayan",
@@ -232,6 +232,47 @@ Function.prototype.myBind = function (scope, ...args) {
 
 let res = func.myBind(a, "bad")
 res()
+
+*/
+
+/*
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+let res = arr.filter(arr => arr %2 === 0)
+console.log(res)
+
+
+let arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+Array.prototype.myFilter = function (cb) {
+    let arr = []
+    for(let i=0;i<this.length;i++) {
+        if(cb(this[i], i, this)) {
+            arr.push(this[i])
+        }
+    }
+
+    return arr
+}
+
+
+let resArr = arr2.myFilter(function (item, index, arr2) {
+    return item % 2 === 0;
+})
+console.log(resArr)
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
