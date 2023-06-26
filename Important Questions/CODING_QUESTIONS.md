@@ -35,3 +35,36 @@
     console.log(mergeArray(arr, arr2))
     
 ```
+
+
+## 
+```
+let initiate = true
+
+let b = (time, work) => {
+    return new Promise ((resolve, reject) => {
+        if(initiate) {
+            setTimeout(() => {
+                resolve(work())
+            }, time)
+        }
+        else {
+            reject(console.log("Error, cannot print"))
+        }
+    })
+}
+
+b(0, ()=>console.log("Hello"))
+.then(() => {
+    return b(2000, ()=>console.log("World")) 
+})
+.then(() => {
+    return b(0, ()=>console.log("Here I am"))
+})
+.catch(() => {
+    console.log("You cannot print the sentence")
+})
+.finally(() => {
+    console.log("I am done")
+})
+```
