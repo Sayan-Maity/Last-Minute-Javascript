@@ -264,14 +264,42 @@ console.log(resArr)
 
 
 
+/*
+let b = null
+let c
+console.log(b)
+console.log(c)
+console.log(a)
+
+*/
 
 
+/*
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+let res = arr.map(item => item * 2)
+console.log(res)
 
+let res2 = arr.filter(item => item * 2)
+console.log(res2)
+*/
 
+/*
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+let res = arr.map(item => item * 2)
+console.log(res)
 
+Array.prototype.myMap = function (cb) {
+    let arr = []
+    for(let i=0;i<this.length;i++) {
+        arr.push(cb(this[i]))
+    }
 
+    return arr
+}
 
-
+let resArr = arr.myMap(item => item * 2)
+console.log(resArr)
+*/
 
 
 
