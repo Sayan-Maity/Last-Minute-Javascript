@@ -37,8 +37,9 @@
 ```
 
 
-## 
+## Print 3 statements in order (where one is asynchrnous call)
 ```
+
 let initiate = true
 
 let b = (time, work) => {
@@ -67,4 +68,30 @@ b(0, ()=>console.log("Hello"))
 .finally(() => {
     console.log("I am done")
 })
+
+```
+
+
+## Find second largest number in an array
+```
+
+const findSecondLargest = (arr) => {
+    let largest = -Infinity;
+    let secondLargest = -Infinity;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > largest) {
+            secondLargest = largest;
+            largest = arr[i];
+        } else if (arr[i] > secondLargest && arr[i] !== largest) {
+            secondLargest = arr[i];
+        }
+    }
+
+    return secondLargest;
+};
+
+const arr = [0, 0, 3, 9, 4, 1, 8, 0];
+console.log(findSecondLargest(arr)); 
+
 ```
