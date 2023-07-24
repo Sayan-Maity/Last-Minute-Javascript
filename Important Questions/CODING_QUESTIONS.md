@@ -1,5 +1,30 @@
 # Coding Questions 
 
+## Selection sort using manual swapping
+```
+
+const selectionSort = (arr) => {
+    const n = arr.length
+    for(var i=0;i<n-1;i++) {
+        var smaller = i;
+        for(var j=i+1;j<n;j++) {
+            if(arr[smaller]>arr[j]) {
+                let temp = 0;
+                temp = arr[smaller];
+                arr[smaller] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    return arr[n-2];
+}
+
+const arr = [0,0,3,9,4,1,8,0]
+console.log(selectionSort(arr))
+
+```
+
+
 ## Merge 2 sorted arrays
 ```
 
