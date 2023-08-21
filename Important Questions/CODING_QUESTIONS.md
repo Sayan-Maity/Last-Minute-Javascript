@@ -1,6 +1,6 @@
 # Coding Questions 
 
-## Second Largest element using Selection (manual swapping)
+## Second Largest element using Selection Sort (manual swapping)
 ```
 
 const selectionSort = (arr) => {
@@ -24,7 +24,7 @@ console.log(selectionSort(arr))
 
 ```
 
-## Bubble sort using manual swapping
+## Bubble Sort (manual swapping)
 ```
 
 function bubbleSort(arr) {
