@@ -127,3 +127,19 @@ This task of handling multiple states from multiple components efficiently can b
 
 This is where Redux comes into the picture. Being a state management library, Redux will basically store and manage all the application's states.
 
+    <<<<<<<<< Redux Lifecycle >>>>>>>>
+
+
+        +------ Javascript -----+
+        |         (app)         |
+        |                       |
+        |                       |
+      Store                  Action
+        |                       |
+        |                       |
+        |                       |
+        +-------- Reducers -----+
+
+
+    So, (App) --> Action --> Reducers --> Store --> (App)               
+
