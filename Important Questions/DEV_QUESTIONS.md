@@ -146,4 +146,53 @@ This is where Redux comes into the picture. Being a state management library, Re
 For example (Comparing Redux to a Ice-cream shop)
 - Action : Customers giving the order to the shopkeeper
 - Reducers : Shopkeeper taking the order from customer and giving it to the store
-- Store : Store is the place where all the items are stored
+- Store : Store is the place where all the items are stored\
+
+
+
+## Differentiate between ForEach, Map, Filter
+> `forEach()`, `map()`, and `filter()` are array methods in JavaScript. They are used to iterate over an array and perform different actions on each item in the array.
+
+```
+
+(a) forEach:
+forEach is used to iterate through each element of an array and execute a provided function for each element.
+It does not create a new array; it modifies the existing array in place.
+It's generally used when you want to perform some action for each element in the array but do not need to return a new array.
+
+Example:
+const numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(number => {
+    console.log(number * 2);
+});
+
+(b) map:
+map is used to create a new array by applying a provided function to each element in the original array.
+It returns a new array with the same length as the original array.
+The values in the new array are the results of applying the function to each element.
+
+Example:
+const numbers = [1, 2, 3, 4, 5];
+
+const doubledNumbers = numbers.map(number => number * 2);
+console.log(doubledNumbers); // [2, 4, 6, 8, 10]
+
+(c) filter:
+filter is used to create a new array with elements that pass a provided test (specified by a function).
+It returns a new array containing only the elements for which the test function returns true.
+
+The length of the new array may be different from the original array.
+Example:
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const evenNumbers = numbers.filter(number => number % 2 === 0);
+console.log(evenNumbers); // [2, 4, 6, 8, 10]
+
+Summary:
+
+forEach: Use when you want to perform an action for each element in the array without creating a new array.
+map: Use when you want to create a new array by transforming each element based on a provided function.
+filter: Use when you want to create a new array containing only the elements that satisfy a condition specified by a function.
+
+```
