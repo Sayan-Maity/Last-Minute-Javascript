@@ -1,6 +1,6 @@
 # Coding Questions 
 
-## Selection sort using manual swapping
+## Second Largest element using Selection (manual swapping)
 ```
 
 const selectionSort = (arr) => {
@@ -21,6 +21,29 @@ const selectionSort = (arr) => {
 
 const arr = [0,0,3,9,4,1,8,0]
 console.log(selectionSort(arr))
+
+```
+
+## Bubble sort using manual swapping
+```
+
+function bubbleSort(arr) {
+    const n = arr.length;
+    for(var i=0;i<n;i++) {
+        for(var j=0;j<n-i-1;j++) {
+            if(arr[j]>arr[j+1]) {
+                let temp = arr[j+1];
+                arr[j+1] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    console.log(arr)
+}
+sortArr(arr)
+
+const arr = [0,0,3,9,4,1,8,0]
+console.log(bubbleSort(arr))
 
 ```
 
