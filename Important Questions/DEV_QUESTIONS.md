@@ -143,6 +143,7 @@ This is where Redux comes into the picture. Being a state management library, Re
 
     So, (App) --> Action --> Reducers --> Store --> (App)               
 
+For example (Comparing Redux to a Ice-cream shop)
 - Action : Customers giving the order to the shopkeeper
 - Reducers : Shopkeeper taking the order from customer and giving it to the store
 - Store : Store is the place where all the items are stored
