@@ -110,3 +110,20 @@ fetchDataAsync();
 ```
 
 - In summary, Promises are a lower-level abstraction that allow you to handle asynchronous operations using .then() and .catch(), while async/await is a higher-level syntactic sugar built on top of Promises, providing a more synchronous-like coding experience.
+
+
+## Redux
+Let's take an e-commerce website for example. An e-commerce website will have several components like the cart component, user profile component, previously viewed section component, and so on.
+
+We'll take the cart component which displays the number of items in a user's cart. The state of the cart component will consist of all the items the user has added to the cart and the total number of those items. At all times the application is up and running, this component has to show the updated number of items in the user's cart.
+
+Whenever a user adds an item to the cart, the application has to internally handle that action by adding that item to the cart object. It has to maintain its state internally and also show the user the total number of items in the cart in the UI.
+
+Similarly, removing an item from the cart should decrease the number of items in the cart internally. It should remove the item from the cart object and also display the updated total number of items in the cart in the UI.
+
+We may very well maintain the internal state of the components inside them, but as and when an application grows bigger, it may have to share some state between components. This is not just only to show them in the view, but also to manage or update them or perform some logic based on their value.
+
+This task of handling multiple states from multiple components efficiently can become challenging when the application grows in size.
+
+This is where Redux comes into the picture. Being a state management library, Redux will basically store and manage all the application's states.
+
