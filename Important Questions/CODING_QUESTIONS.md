@@ -142,3 +142,33 @@ const arr = [0, 0, 3, 9, 4, 1, 8, 0];
 console.log(findSecondLargest(arr)); 
 
 ```
+
+
+## Check if Anaagram
+```
+
+#include <bits/stdc++.h>
+using namespace std;
+
+bool count (string str, string str2) {
+    if(str.size() != str2.size()) return false;
+
+    map<char, int>mpp;
+    map<char, int>mpp2;
+
+    for(auto it: str) mpp[it]++;
+    for(auto it: str2) mpp2[it]++;
+
+    if(mpp == mpp2) return true;
+    return false;
+}
+
+int main() {
+    string str = "sayan";
+    string str2 = "nayas";
+    
+    cout<<count(str, str2);
+    
+}
+
+```
