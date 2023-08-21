@@ -155,7 +155,7 @@ For example (Comparing Redux to a Ice-cream shop)
 
 ```
 
-(a) forEach:
+(a) forEach():
 forEach is used to iterate through each element of an array and execute a provided function for each element.
 It does not create a new array; it modifies the existing array in place.
 It's generally used when you want to perform some action for each element in the array but do not need to return a new array.
@@ -167,7 +167,7 @@ numbers.forEach(number => {
     console.log(number * 2);
 });
 
-(b) map:
+(b) map():
 map is used to create a new array by applying a provided function to each element in the original array.
 It returns a new array with the same length as the original array.
 The values in the new array are the results of applying the function to each element.
@@ -178,7 +178,7 @@ const numbers = [1, 2, 3, 4, 5];
 const doubledNumbers = numbers.map(number => number * 2);
 console.log(doubledNumbers); // [2, 4, 6, 8, 10]
 
-(c) filter:
+(c) filter():
 filter is used to create a new array with elements that pass a provided test (specified by a function).
 It returns a new array containing only the elements for which the test function returns true.
 
