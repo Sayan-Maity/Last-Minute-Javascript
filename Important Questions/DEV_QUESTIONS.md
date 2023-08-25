@@ -196,3 +196,39 @@ map: Use when you want to create a new array by transforming each element based 
 filter: Use when you want to create a new array containing only the elements that satisfy a condition specified by a function.
 
 ```
+
+## Implement Filter function unside react app
+
+```
+
+    <p>{userData?.filter((e) => (!userValue? true : e.userId === parseInt(userValue) )).map((item, index) => (
+       <div key={index} className="user">
+        <p>UserId = {item?.userId}</p>
+        <p>{item?.title}</p>
+        <p>{item?.body}</p>
+      </div>
+    ))}</p>
+
+```
+
+
+## Use Async to call api instead of .then 
+
+```
+
+useEffect(() => {
+    async function callFunction() {
+      try {
+        const res = await axios.get(
+          "https://jsonplaceholder.typicode.com/posts"
+        );
+        setUserData(res.data);
+        console.log(res.data);
+      } catch (err) {
+        console.log("Error =>", err);
+      }
+    }
+    callFunction();
+  }, []);
+
+```
