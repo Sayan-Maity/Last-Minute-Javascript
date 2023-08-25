@@ -200,7 +200,9 @@ filter: Use when you want to create a new array containing only the elements tha
 ## Implement Filter function unside react app
 
 ```
-
+  const [userData, setUserData] = useState([]);
+  const [userValue, setUserValue] = useState("");
+  
     <p>{userData?.filter((e) => (!userValue? true : e.userId === parseInt(userValue) )).map((item, index) => (
        <div key={index} className="user">
         <p>UserId = {item?.userId}</p>
