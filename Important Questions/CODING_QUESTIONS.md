@@ -172,5 +172,13 @@ const demo3 = y.split(' ').reverse().join(' ')
 console.log(demo2) // zimargorP ot emocleW
 console.log(demo3) // Programiz to Welcome
 
-
 ```
+
+
+
+
+
+
+
+
+
