@@ -216,7 +216,7 @@ filter: Use when you want to create a new array containing only the elements tha
 
 ```
 
-useEffect(() => {
+  useEffect(() => {
     async function callFunction() {
       try {
         const res = await axios.get(
