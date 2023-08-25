@@ -61,39 +61,6 @@ console.log(bubbleSort(arr))
 ```
 
 
-## Print 3 statements in order (where one is asynchrnous call)
-```
-
-let initiate = true
-
-let b = (time, work) => {
-    return new Promise ((resolve, reject) => {
-        if(initiate) {
-            setTimeout(() => {
-                resolve(work())
-            }, time)
-        }
-        else {
-            reject(console.log("Error, cannot print"))
-        }
-    })
-}
-
-b(0, ()=>console.log("Hello"))
-.then(() => {
-    return b(2000, ()=>console.log("World")) 
-})
-.then(() => {
-    return b(0, ()=>console.log("Here I am"))
-})
-.catch(() => {
-    console.log("You cannot print the sentence")
-})
-.finally(() => {
-    console.log("I am done")
-})
-
-```
 
 ## Second Largest element using Selection Sort (manual swapping)
 ```
@@ -188,6 +155,22 @@ const n = 5;
 for (let i = 0; i < n; i++) {
     console.log(fibonacci(i) + " ");
 }
+
+
+```
+
+## Reverse each word of given sentence
+
+```
+
+const x = "Welcome to Programiz";
+const y = "Welcome to Programiz";
+
+const demo2 = x.split('').reverse().join('')
+const demo3 = y.split(' ').reverse().join(' ')
+
+console.log(demo2) // zimargorP ot emocleW
+console.log(demo3) // Programiz to Welcome
 
 
 ```
