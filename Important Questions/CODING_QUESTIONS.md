@@ -174,11 +174,62 @@ console.log(demo3) // Programiz to Welcome
 
 ```
 
+## Flatten array to infinity using recursion
+
+```
+
+function flatten (array) {
+  return array.reduce((acc, curr) => {
+    if(Array.isArray(curr)) {
+      acc.push(...flatten(curr))
+    } 
+    else {
+      acc.push(curr)
+        return acc;
+  }, [])
+}
+const nestedArray = [1, 2, [3, [4]], 5];
+const flattenedArray = flatten(nestedArray);
+// const flattenedArray = nestedArray.flat(Infinity)
+console.log(flattenedArray)
+
+```
+
+## Counting instances of values in an array
+
+```
+
+const fruits = ['apple', 'banana', 'orange', 'apple', 'orange', 'banana', 'banana'];
+var output = fruits.reduce((acc, curr) => {
+  if (acc[curr]) acc[curr]++;
+  else acc[curr] = 1;
+  return acc;
+}, {})
+console.log(output)
+
+```
+
+## Change "Hello World" to "DlRoW OlLeH"
 
 
+```
 
+function reverseCase(str) {
+  let reversedStr = str.split("").reverse().join("");
 
+  var tempStr = "";
+  for (var i = 0; i < reversedStr.length; i++) {
+    var char = reversedStr.charAt(i);
+    if (i % 2 == 0) tempStr += char.toUpperCase();
+    else tempStr += char;
+  }
 
+  return tempStr;
+}
+let input = "hello world";
+console.log(reverseCase(input));
+
+```
 
 
 

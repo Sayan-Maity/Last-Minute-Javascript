@@ -197,6 +197,26 @@ filter: Use when you want to create a new array containing only the elements tha
 
 ```
 
+
+## Can we do server side rendering in ReactJs?
+``` Yes, we can do server side rendering in ReactJs using NextJs. NextJs is a framework built on top of 
+ReactJs that provides server side rendering capabilities. It allows you to render React components on the
+ server and send the generated HTML to the client, improving performance and SEO.
+- npm init vite-plugin-ssr@latest
+```
+
+## What are the performance improvement techniques we can use in ReactJs and NextJs?
+```
+ReactJS :
+- useMemo
+- React Lazy Loading
+
+NextJs :
+- Server Side Rendering
+
+```
+
+
 ## Implement Filter function unside react app
 
 ```
