@@ -256,7 +256,7 @@ NextJs :
 ```
 
 
-## When to use ContextAPI and Redux ?
+## When to use ContextAPI and Redux [Link]("https://dev.to/ruppysuppy/redux-vs-context-api-when-to-use-them-4k3p) ?
 
 ```
 
