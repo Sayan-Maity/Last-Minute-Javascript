@@ -234,6 +234,8 @@ console.log(reverseCase(input));
 
 ## Find the output of the following code
 
+(Q1).
+
 ```
 
 console.log('a')
@@ -264,5 +266,17 @@ c
 d
 e
 b
+
+```
+
+(Q2).
+
+```
+
+let a=b=4;
+console.log(a, b)
+
+Output :
+4 4
 
 ```
