@@ -254,3 +254,22 @@ NextJs :
   }, []);
 
 ```
+
+
+## When to use ContextAPI and Redux ?
+
+```
+
+ContextAPI :
+- good for static data that is not often refreshed or updated
+- requires less boilerplate code
+- good for small to medium-sized applications
+- debugging can be hard in highly nested component
+
+Redux :
+- works well with both static and dynamic data
+- requires extensive boilerplate code
+- good for large applications with complex state management
+- Redux Dev Tools for easy debugging
+
+```
