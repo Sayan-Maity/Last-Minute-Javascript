@@ -232,4 +232,37 @@ console.log(reverseCase(input));
 ```
 
 
+## Find the output of the following code
 
+```
+
+console.log('a')
+
+async function b() {
+    setTimeout(() => {
+        console.log('b')
+    }, 0)
+}
+b()
+
+console.log('c')
+
+async function d () {
+    return new Promise ((resolve, reject) => {
+        console.log('d')
+        resolve()
+    })
+}
+d()
+
+console.log('e')
+
+
+Output: 
+a
+c
+d
+e
+b
+
+```
