@@ -273,3 +273,17 @@ Redux :
 - Redux Dev Tools for easy debugging
 
 ```
+
+## What are react hooks?
+> ```React Hooks``` are functions that let you use state and other React features in functional components. Before hooks, state and lifecycle methods could only be used in class components.
+
+- ```useState```: Allows you to add state to functional components.
+- ```useEffect```: Allows you to perform side effects in your functional components.
+- ```useContext```: Allows you to use context in your functional components.
+- ```useRef```: Allows you to create mutable object that persists for the entire lifecycle of the component.
+- ```useReducer```: Allows you to manage state transitions in a more predictable way.
+- ```useCallback```: Allows you to memoize functions to prevent unnecessary re-renders.
+- ```useMemo```: Allows you to memoize values to prevent unnecessary calculations.
+
+
+

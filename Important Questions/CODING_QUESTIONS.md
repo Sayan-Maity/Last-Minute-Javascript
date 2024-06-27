@@ -276,7 +276,29 @@ b
 let a=b=4;
 console.log(a, b)
 
+
 Output :
 4 4
+
+```
+
+(Q3).
+
+```
+
+function func () {
+  console.log('1')
+  setTimeout(() => {
+    console.log('2')
+  }, 0)
+  console.log('3')
+}
+func()
+
+
+Output:
+1
+3
+2
 
 ```
