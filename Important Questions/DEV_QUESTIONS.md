@@ -286,4 +286,76 @@ Redux :
 - ```useMemo```: Allows you to memoize values to prevent unnecessary calculations.
 
 
+## When to use map and forEach in ReactJs?
+`map()` and `forEach()` are both array methods in JavaScript that can be used to iterate over an array
+and perform an action on each element. However, they have different use cases in ReactJS.
 
+
+MAP() :
+- returns a new array with transformed elements.
+- chainable since returns new array. (eg: `array.map().filter().reduce()`)
+
+FOREACH() :
+- does not return anything. (returns `undefined`)
+- not chainable since it returns undefined.
+
+MAP() :
+```
+
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(num => num * 2);
+console.log(doubled); // Output: [2, 4, 6, 8, 10]
+
+```
+
+FOREACH() :
+```
+
+const numbers = [1, 2, 3, 4, 5];
+numbers.forEach(num => {
+    console.log(num * 2);
+});
+// Output: 2, 4, 6, 8, 10 (each on a new line)
+
+```
+
+MAP() :
+```
+
+import React from 'react';
+
+const items = ['Apple', 'Banana', 'Cherry'];
+
+function ItemList() {
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  );
+}
+
+export default ItemList;
+
+```
+
+FOREACH() :
+```
+
+import React from 'react';
+
+const items = ['Apple', 'Banana', 'Cherry'];
+
+function ItemList() {
+  const itemList = [];
+  items.forEach((item, index) => {
+    itemList.push(<li key={index}>{item}</li>);
+  });
+
+  return <ul>{itemList}</ul>;
+}
+
+export default ItemList;
+
+```
