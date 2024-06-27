@@ -359,3 +359,36 @@ function ItemList() {
 export default ItemList;
 
 ```
+
+## When to use slice and splice?
+> `slice()` and `splice()` are array methods in JavaScript that can be used to extract or modify elements in an array. They have different use cases and behaviors.
+
+SLICE() :
+- returns a portion of an array into a new array from begin to end (end not included)
+- does not modify the original array
+
+SPLICE() :
+- returns an array of the removed elements
+- modifies the original array by removing, replacing, or adding elements
+
+SLICE() :
+```
+
+const fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+const citrus = fruits.slice(1, 3);
+
+console.log(citrus); // ["Orange", "Lemon"]
+console.log(fruits); // ["Banana", "Orange", "Lemon", "Apple", "Mango"]
+
+```
+
+SPLICE() :
+```
+
+const fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+const removed = fruits.splice(2, 2, 'Kiwi', 'Grapes');
+
+console.log(removed); // ["Lemon", "Apple"]
+console.log(fruits); // ["Banana", "Orange", "Kiwi", "Grapes", "Mango"]
+
+```
