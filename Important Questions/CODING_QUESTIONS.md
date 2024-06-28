@@ -185,7 +185,8 @@ function flatten (array) {
     } 
     else {
       acc.push(curr)
-        return acc;
+    }
+    return acc;
   }, [])
 }
 const nestedArray = [1, 2, [3, [4]], 5];
