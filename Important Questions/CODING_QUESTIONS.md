@@ -232,6 +232,47 @@ console.log(reverseCase(input));
 
 ```
 
+## Implement Promise.all()
+
+```
+
+
+function promiseAll (promises) {
+    return new Promise((resolve, reject) => {
+        let cnt=0;
+        let result=[]
+
+        promises.forEach((promise, index) => {
+            Promise.resolve(promise)
+            .then((res) => {
+                cnt++;
+                result[index] = res;
+                if(cnt == result.length) {
+                    resolve(result)
+                }
+            })
+            .catch((err) => {
+                reject(err)
+            })
+        })
+    })
+}
+
+const p1 = Promise.resolve(1)
+const p2 = Promise.resolve(2)
+const p3 = Promise.resolve(3)
+
+promiseAll([p1,p2,p3])
+    .then((res) => {
+        console.log(res)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+
+
+```
+
 
 ## Find the output of the following code
 
