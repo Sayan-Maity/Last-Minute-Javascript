@@ -316,6 +316,39 @@ quick
 
 ```
 
+## Deep Clone an object
+
+```
+
+function deepClone (obj) {
+    if(obj == null || typeof obj !== 'object') return obj;
+
+    if(Array.isArray(obj)) {
+        return obj.map(deepClone)
+    }
+
+    let clonedObj = {}
+    for(const key in obj) {
+        if(obj.hasOwnProperty(key)) {
+            clonedObj[key] = deepClone(obj[key])
+        }
+    }
+    return clonedObj
+}
+
+const original = {
+  a: 1,
+  b: {
+    c: 2,
+    d: [3, 4],
+  },
+};
+
+const copy = deepClone(original)
+console.log(copy)
+
+```
+
 
 ## Find the output of the following code
 
