@@ -1,4 +1,18 @@
 
+## Types in TypeScript
+(a) Built-in types
+- number
+- string
+- boolean
+- void
+- null
+- undefined
+
+(b) User-defined types
+- arrays
+- enums
+- classes
+- interfaces
 
 
 ## Difference types and interfaces?
