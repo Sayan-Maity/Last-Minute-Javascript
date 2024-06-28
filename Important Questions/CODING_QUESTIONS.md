@@ -347,6 +347,69 @@ const original = {
 const copy = deepClone(original)
 console.log(copy)
 
+
+Output:
+{ a: 1, b: { c: 2, d: [ 3, 4 ] } }
+
+```
+
+## Reverse a String
+
+```
+
+function reverseString(str) {
+    let reversed = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+    return reversed;
+}
+
+console.log(reverseString('hello'));  
+
+
+Output: 'olleh'
+
+```
+
+## Capitalize the first letter of each word in a string
+
+```
+
+function capitalizeWords (sen) {
+    sen = sen.split(' ')
+    let ans=""
+    for(let i=0;i<sen.length;i++) {
+        let word = sen[i];
+        let character = word.charAt(0).toUpperCase() + word.slice(1)
+        ans+=character + (' ')
+    }
+
+    return ans
+}
+
+console.log(capitalizeWords('the quick brown fox'));
+
+
+Output:
+The Quick Brown Fox
+
+```
+
+
+## Filtering and Mapping
+
+```
+function filterAndDouble(numbers) {
+    return numbers.filter(num => num % 2 !== 0).map(num => num * 2);
+}
+
+console.log(filterAndDouble([1, 2, 3, 4, 5]));  
+
+
+Output:
+[2, 6, 10]
+
 ```
 
 
