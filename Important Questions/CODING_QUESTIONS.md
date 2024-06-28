@@ -194,6 +194,10 @@ const flattenedArray = flatten(nestedArray);
 // const flattenedArray = nestedArray.flat(Infinity)
 console.log(flattenedArray)
 
+
+Output:
+[1, 2, 3, 4, 5]
+
 ```
 
 ## Counting instances of values in an array
@@ -207,6 +211,10 @@ var output = fruits.reduce((acc, curr) => {
   return acc;
 }, {})
 console.log(output)
+
+
+Output:
+{ apple: 2, banana: 3, orange: 2 }
 
 ```
 
@@ -229,6 +237,9 @@ function reverseCase(str) {
 }
 let input = "hello world";
 console.log(reverseCase(input));
+
+Output:
+DlRoW OlLeH
 
 ```
 
@@ -270,6 +281,38 @@ promiseAll([p1,p2,p3])
         console.log(err)
     })
 
+
+Output:
+[1,2,3]
+
+
+```
+
+## Find longest word in string
+
+```
+
+const sentence = "The quick brown fox jumps over the lazy dog"
+
+function longest(sen) {
+    sen = sen.split(" ")
+    var maxLen=0;
+    var res=""
+
+    for(let i=0;i<sen.length;i++) {
+        let word = sen[i];
+        if(word.length > maxLen) {
+            maxLen=word.length;
+            res=word
+        }
+    }
+    return res;
+}
+console.log (longest(sentence)) 
+
+
+Output:
+quick
 
 ```
 
