@@ -392,3 +392,28 @@ console.log(removed); // ["Lemon", "Apple"]
 console.log(fruits); // ["Banana", "Orange", "Kiwi", "Grapes", "Mango"]
 
 ```
+
+## difference between Props and State ?
+> `Props` and `State` are both plain JavaScript objects used in React to manage data and control the behavior of components. However, they have different use cases and behaviors.
+
+PROPS :
+- Props are immutable, cannot be modified by the component itself.
+- Props are like function parameters
+- passed from one component to another
+
+STATE :
+- State is mutable, can be modified by the component itself using `setState()`.
+- State is similar to variables
+- passed within the component
+
+## How do browser read JSX?
+- Babel compiles JSX into JavaScript that browsers can understand, otherwise browsers are not capable of reading JSX directly.
+
+## What is Reconcliation in ReactJs?
+- `Reconciliation` is the process by which React updates the DOM in response to changes in the component tree. When a component's state or props change, React compares the new tree with the previous tree and determines what changes need to be made to the DOM to reflect the new state of the application.
+
+- ```Keys``` play a crucial role in the reconciliation process when dealing with lists of elements. They help React identify which items have changed, been added, or been removed. Without keys, React would not be able to correctly determine these changes, leading to inefficient updates and potential bugs.
+
+## Difference between normal function and arrow function in JS?
+- ```Normal Functions``` are more versatile in terms of this binding and can be used in a variety of contexts, including as constructors and methods.
+- ```Arrow Functions``` provide a more concise syntax and lexically bind this, making them more suitable for situations where the function does not need its own this context, such as callbacks and functional programming.
