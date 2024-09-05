@@ -119,3 +119,72 @@ for (var i = 0; i < arr.length - 1; i++) {
   }, 1000 * i);  
 }
 ```
+
+(Q8).
+
+```
+
+console.log('a')
+
+async function b() {
+    setTimeout(() => {
+        console.log('b')
+    }, 0)
+}
+b()
+
+console.log('c')
+
+async function d () {
+    return new Promise ((resolve, reject) => {
+        console.log('d')
+        resolve()
+    })
+}
+d()
+
+console.log('e')
+
+
+Output: 
+a
+c
+d
+e
+b
+
+```
+
+(Q9).
+
+```
+
+let a=b=4;
+console.log(a, b)
+
+
+Output :
+4 4
+
+```
+
+(Q10).
+
+```
+
+function func () {
+  console.log('1')
+  setTimeout(() => {
+    console.log('2')
+  }, 0)
+  console.log('3')
+}
+func()
+
+
+Output:
+1
+3
+2
+
+```
