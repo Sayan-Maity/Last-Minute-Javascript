@@ -13,7 +13,9 @@ console.log(x - y);
 52
 3
 
-In the first console.log, the + operator is used for concatenation. In the second console.log, the - operator is used for subtraction. Since the first operand is a string, the - operator will convert the string to a number.
+In the first console.log, the + operator is used for concatenation. In the second console.log,
+the - operator is used for subtraction. Since the first operand is a string,
+the - operator will convert the string to a number.
 ```
 
 (2).
