@@ -6,7 +6,8 @@ const obj = {
     name: "sayan",
     age: 21
 }
-
+```
+```
 function printName(adverb) {
     console.log(this.name + " is " + adverb)
 }
@@ -36,11 +37,10 @@ const copy2 = printName.myBind(obj, 'bad') // returns function
 copy2()
 ```
 
+## Map polyfill:
 ```
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 ```
-
-## Map polyfill:
 ```
 Array.prototype.myMap = function (cb) {
     let arr = []
@@ -161,6 +161,7 @@ call()
   });
 ```
 
+## Promise.all() polyfill:
 ```
 function likeVideo(text) {
   return new Promise((res, rej) => {
@@ -184,8 +185,6 @@ function likeVideo3(text) {
   });
 }
 ```
-
-## Promise.all() polyfill:
 ```
 Promise.allPolyfill = (promises) => {
   return new Promise((resolve, reject) => {
