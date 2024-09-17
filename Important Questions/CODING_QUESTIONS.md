@@ -396,6 +396,20 @@ The Quick Brown Fox
 
 ```
 
+## Given an object, return the given output
+
+```
+const obj = {
+  venueType: [1101, 1102],
+  areaType: [2101, 2102],
+};
+
+Output:
+venueType=1101,1102&areaType=2101,2102
+
+const res = Object.keys(obj).map((key) => 
+    `${key}=${obj[key]}`).join('&');
+```
 
 ## Filtering and Mapping
 
@@ -412,74 +426,23 @@ Output:
 
 ```
 
-
-## Find the output of the following code
-
-(Q1).
-
+## Remove duplicates from a string
 ```
 
-console.log('a')
-
-async function b() {
-    setTimeout(() => {
-        console.log('b')
-    }, 0)
+function removeDuplicate(input) {
+    let result = ""
+    for (let i = 0; i < input.length; i++) {
+        if (result.indexOf(input[i]) === -1) {
+            result += input[i]
+        }
+    }
+    console.log(result)
+    return result
 }
-b()
 
-console.log('c')
-
-async function d () {
-    return new Promise ((resolve, reject) => {
-        console.log('d')
-        resolve()
-    })
-}
-d()
-
-console.log('e')
-
-
-Output: 
-a
-c
-d
-e
-b
-
-```
-
-(Q2).
-
-```
-
-let a=b=4;
-console.log(a, b)
-
-
-Output :
-4 4
-
-```
-
-(Q3).
-
-```
-
-function func () {
-  console.log('1')
-  setTimeout(() => {
-    console.log('2')
-  }, 0)
-  console.log('3')
-}
-func()
-
+const input = "banana"
+removeDuplicate(input)
 
 Output:
-1
-3
-2
-
+ban
 ```
