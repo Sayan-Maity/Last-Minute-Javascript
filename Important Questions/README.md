@@ -1,7 +1,8 @@
-## Different ways to write Filter:
+## Different ways to write [Filter]:
 
 const arr = [1,2,3,4,5,6];
 ```
+// Eg-1
 function logic (arr) {
     return arr > 2
 }
@@ -14,14 +15,17 @@ const res2 = arr.filter(function logic (arr) {
 })
 ```
 ```
+// Eg-3
 const res3 = arr.filter((arr) => {
     return arr > 2
 })
 ```
 ```
+// Eg-4
 const res4 = arr.filter((arr) => arr > 2)
 ```
 ```
+// Eg-5
 function func (arr) {
     return arr>2;
 }
