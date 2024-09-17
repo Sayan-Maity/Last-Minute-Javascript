@@ -55,3 +55,64 @@ Output:
 [ 3, 4, 5, 6 ]
 [ 3, 4, 5, 6 ]
 ```
+
+## Different ways to write [Map]:
+
+const arr = [1,2,3,4,5,6];
+```
+// Eg-1
+function logic (arr) {
+    return arr.toString(2)
+}
+const res = arr.map(logic)
+```
+
+```
+// Eg-2
+const res2 = arr.map(function logic (arr) {
+    return arr.toString(2)
+})
+```
+
+```
+// Eg-3
+const res3 = arr.map((arr) => {
+    return arr.toString(2)
+})
+```
+
+```
+// Eg-4
+const res4 = arr.map((arr) => arr.toString(2))
+```
+
+```
+// Eg-5
+function func(arr) {
+    return arr.toString(2)
+}
+Array.prototype.myMap = function (logic) {
+    const res = [];
+    for(let i=0;i<this.length;i++) {
+        res.push(logic(this[i]))
+    }
+    return res
+}
+const res5 = arr.myMap(func)
+```
+
+```
+console.log(res)
+console.log(res2)
+console.log(res3)
+console.log(res4)
+console.log(res5)
+
+
+Output:
+[ '1', '10', '11', '100', '101', '110' ]
+[ '1', '10', '11', '100', '101', '110' ]
+[ '1', '10', '11', '100', '101', '110' ]
+[ '1', '10', '11', '100', '101', '110' ]
+[ '1', '10', '11', '100', '101', '110' ]
+```
