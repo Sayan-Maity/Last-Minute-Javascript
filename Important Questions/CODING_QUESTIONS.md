@@ -428,7 +428,6 @@ Output:
 
 ## Remove duplicates from a string
 ```
-
 function removeDuplicate(input) {
     let result = ""
     for (let i = 0; i < input.length; i++) {
@@ -445,4 +444,45 @@ removeDuplicate(input)
 
 Output:
 ban
+```
+
+## Implement Map and Filter using Reduce:
+```
+function myFilter(check, arr) {
+    return arr.reduce((acc, curr) => {
+        if(check(curr)) {
+            acc.push(curr)
+        }
+        return acc;
+    }, [])
+}
+
+const arr = [1,2,3,4,5]
+const res = arr.filter(i => i>2)
+const res2 = myFilter(i=>i>2, arr)
+console.log(res)
+console.log(res2)
+
+Output:
+[3,4,5]
+[3,4,5]
+```
+
+```
+function myMap(check, arr) {
+    return arr.reduce((acc, curr) => {
+        acc.push(check(curr))
+        return acc;
+    }, [])
+}
+
+const arr = [1,2,3,4,5]
+const res = arr.map(i => i*2)
+const res2 = myMap(i=>i*2, arr)
+console.log(res)
+console.log(res2)
+
+Output:
+[2,4,6,8,10]
+[2,4,6,8,10]
 ```
