@@ -507,3 +507,39 @@ Output:
 8
 
 ```
+
+## Return the first and last name from the array
+
+```
+const users = [
+    {firstName: "sayan", lastName: "maity", age: 21},
+    {firstName: "rahul", lastName: "barui", age: 32},
+    {firstName: "sheetal", lastName: "mehta", age: 23},
+    {firstName: "jain", lastName: "patel", age: 21},
+    {firstName: "shreyam", lastName: "sen", age: 30},
+]
+
+function logic (acc, curr) {
+    acc = curr.firstName + curr.lastName;
+    return acc;
+}
+
+function logic2 (user) {
+    return [user.firstName, user.lastName].join(' ');
+    // let res = "";
+    // res = user.firstName + " " + user.lastName;
+    // return res;
+}
+const res = users.map(logic2)
+console.log(res)
+
+
+Output:
+[
+  'sayan maity',
+  'rahul barui',
+  'sheetal mehta',
+  'jain patel',
+  'shreyam sen'
+]
+```
