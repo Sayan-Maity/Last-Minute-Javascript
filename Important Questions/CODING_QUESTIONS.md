@@ -486,3 +486,24 @@ Output:
 [2,4,6,8,10]
 [2,4,6,8,10]
 ```
+
+
+## Find greatest number using reduce
+```
+const arr = [1,2,8,3,4,5]
+
+// find the maximum
+function logic (acc, curr) {
+    if (acc<curr) {
+        acc = curr;
+    }
+    return acc;
+}
+
+const res = arr.reduce(logic, -Infinity)
+console.log(res)
+
+Output:
+8
+
+```
